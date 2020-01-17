@@ -1,0 +1,44 @@
+<!-- DOM element styling -->
+<link rel="stylesheet" href="/src/app/app.component.css" />
+
+<!-- HTML DOM structure -->
+
+<!-- app container -->
+<div>
+  <div class="custom-bg">
+    <hr />
+    <!-- header section -->
+    <hr />
+    <h1 class="header">{{ title }}</h1>
+    <hr />
+
+    <!-- navigation -->
+    <div class="nav-buttons">
+      <div>
+        <button
+          class="btn btn-dark"
+          [routerLink]="['/write-quotes']"
+          routerLinkActive="router-link-active"
+        >
+          write Quote
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-dark"
+          [routerLink]="['/dashboard']"
+          routerLinkActive="router-link-active"
+        >
+          Dashboard
+        </button>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <!-- content -->
+  <div class="app-content container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- end of webpage -->
+</div>
