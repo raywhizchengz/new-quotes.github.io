@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Rate-The-Quotes"
+    }
+  },
+  "defaultProject": "Rate-The-Quotes",
+  "cli": {
+    "analytics": "57467308-13cd-469e-aadc-b7e989219465"
+  }
 }
