@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: blueviolet;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.app-content {
+  margin-top: 1rem;
+}
+
+.custom-bg {
+  background-color: rgb(rgb(78, 75, 75), rgb(10, 240, 10), rgb(245, 101, 18))
+}

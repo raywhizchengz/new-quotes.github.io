@@ -1,0 +1,55 @@
+<!-- DOM element styling -->
+<link
+  rel="stylesheet"
+  href="/src/app/quotes-dashboard/quotes-dashboard.component.css"
+/>
+
+<!-- HTML DOM structure -->
+<div class="container">
+  <div *ngFor="let quote of quotes; let i = index">
+    <div class="card bg-custom card-arrange">
+      <div class="arrange">
+        <button
+          class="top-card btn btn-outline-success btn-sm"
+          (click)="like(i)"
+        >
+          likes: <span> {{ quote.upVote }} </span>
+        </button>
+        <button
+          class="top-card btn btn-outline-primary btn-sm"
+          (click)="toggleQuote(i)"
+        >
+          Toggle Quote
+        </button>
+        <h3 class="quote-title">{{ quote.quoteTitle }}</h3>
+        <button
+          class="top-card btn btn-outline-warning btn-sm"
+          (click)="deleteQuote(i)"
+        >
+          Delete Quote
+        </button>
+        <button
+          class="top-card btn btn-outline-danger btn-sm"
+          (click)="dislike(i)"
+        >
+          dislikes: <span> {{ quote.downVote }} </span>
+        </button>
+      </div>
+      <div class="card-body bg-custom-body" *ngIf="quote.showQuote">
+        <p class="center-content">
+          {{ quote.quote }}
+        </p>
+        <hr />
+        <p class="center-content">Quote author: {{ quote.quoteAuthor }}</p>
+        <p class="center-content">Posted by: {{ quote.userName }}</p>
+      </div>
+    </div>
+    <hr />
+    <p class="center-content date-element">
+      ~~| Posted: {{ quote.date | elapsedTime }} |~~
+    </p>
+    <p class="center-content date-element" appHighlight>
+      ~~| most likes |~~
+    </p>
+  </div>
+</div>
